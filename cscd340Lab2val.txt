@@ -1,0 +1,184 @@
+Program Ended
+==12476== 
+==12476== HEAP SUMMARY:
+==12476==     in use at exit: 0 bytes in 0 blocks
+==12476==   total heap usage: 55 allocs, 55 frees, 12,107 bytes allocated
+==12476== 
+==12476== All heap blocks were freed -- no leaks are possible
+==12476== 
+==12476== For counts of detected and suppressed errors, rerun with: -v
+==12476== ERROR SUMMARY: 16 errors from 4 contexts (suppressed: 0 from 0)
+
+1) Print the list - Word
+2) Add First - Word
+3) Add Last - Word
+4) Sort - Word
+5) Remove First - Word
+6) Remove Item - Word
+============================
+7) Print the list - Movie
+8) Add First - Movie
+9) Add Last - Movie
+10) Remove Last - Movie
+11) Remove Item - Movie
+12) Quit
+Choice --> 1
+Weir - 4
+Andy - 4
+Edition - 7
+8th - 3
+Concepts - 8
+Systems - 7
+Operating - 9
+1) Print the list - Word
+2) Add First - Word
+3) Add Last - Word
+4) Sort - Word
+5) Remove First - Word
+6) Remove Item - Word
+============================
+7) Print the list - Movie
+8) Add First - Movie
+9) Add Last - Movie
+10) Remove Last - Movie
+11) Remove Item - Movie
+12) Quit
+Choice --> 2
+enter a word to be built: Orange
+1) Print the list - Word
+2) Add First - Word
+3) Add Last - Word
+4) Sort - Word
+5) Remove First - Word
+6) Remove Item - Word
+============================
+7) Print the list - Movie
+8) Add First - Movie
+9) Add Last - Movie
+10) Remove Last - Movie
+11) Remove Item - Movie
+12) Quit
+Choice --> 1) Print the list - Word
+Choice --> 1
+Orange - 6
+Weir - 4
+Andy - 4
+Edition - 7
+8th - 3
+Concepts - 8
+Systems - 7
+Operating - 9
+1) Print the list - Word
+2) Add First - Word
+3) Add Last - Word
+4) Sort - Word
+5) Remove First - Word
+6) Remove Item - Word
+============================
+7) Print the list - Movie
+8) Add First - Movie
+9) Add Last - Movie
+10) Remove Last - Movie
+11) Remove Item - Movie
+12) Quit
+Choice --> 5
+1) Print the list - Word
+2) Add First - Word
+3) Add Last - Word
+4) Sort - Word
+5) Remove First - Word
+6) Remove Item - Word
+============================
+7) Print the list - Movie
+8) Add First - Movie
+9) Add Last - Movie
+10) Remove Last - Movie
+11) Remove Item - Movie
+12) Quit
+Choice --> 1
+Weir - 4
+Andy - 4
+Edition - 7
+8th - 3
+Concepts - 8
+Systems - 7
+Operating - 9
+1) Print the list - Word
+2) Add First - Word
+3) Add Last - Word
+4) Sort - Word
+5) Remove First - Word
+6) Remove Item - Word
+============================
+7) Print the list - Movie
+8) Add First - Movie
+9) Add Last - Movie
+10) Remove Last - Movie
+11) Remove Item - Movie
+12) Quit
+Choice --> 7
+Gone Girl 
+Starring: 
+Ben Affleck,
+Star Wars 
+Starring: 
+Harrison Ford,
+Carrie Fisher,
+Mark Hamill,
+Fast and Furious 7 
+Starring: 
+Vin Diesel,
+Paul Walker,
+1) Print the list - Word
+2) Add First - Word
+3) Add Last - Word
+4) Sort - Word
+5) Remove First - Word
+6) Remove Item - Word
+============================
+7) Print the list - Movie
+8) Add First - Movie
+9) Add Last - Movie
+10) Remove Last - Movie
+11) Remove Item - Movie
+12) Quit
+Choice --> 10
+1) Print the list - Word
+2) Add First - Word
+3) Add Last - Word
+4) Sort - Word
+5) Remove First - Word
+6) Remove Item - Word
+============================
+7) Print the list - Movie
+8) Add First - Movie
+9) Add Last - Movie
+10) Remove Last - Movie
+11) Remove Item - Movie
+12) Quit
+Choice --> 7
+Gone Girl 
+Starring: 
+Ben Affleck,
+Star Wars 
+Starring: 
+Harrison Ford,
+Carrie Fisher,
+Mark Hamill,
+1) Print the list - Word
+2) Add First - Word
+3) Add Last - Word
+4) Sort - Word
+5) Remove First - Word
+6) Remove Item - Word
+============================
+7) Print the list - Movie
+8) Add First - Movie
+9) Add Last - Movie
+10) Remove Last - Movie
+11) Remove Item - Movie
+12) Quit
+
+I had remove Item working for both and then broke them for good, they both segfault.  
+
+

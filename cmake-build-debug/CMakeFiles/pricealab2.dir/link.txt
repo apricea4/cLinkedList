@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/pricealab2.dir/cscd340Lab2.c.o CMakeFiles/pricealab2.dir/linkedlist/linkedList.c.o CMakeFiles/pricealab2.dir/words/word.c.o CMakeFiles/pricealab2.dir/linkedlist/listUtils.c.o CMakeFiles/pricealab2.dir/utils/fileUtil.c.o CMakeFiles/pricealab2.dir/utils/myUtils.c.o CMakeFiles/pricealab2.dir/movies/movie.c.o  -o pricealab2 
