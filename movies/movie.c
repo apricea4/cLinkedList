@@ -161,7 +161,7 @@ void * buildTypeMovie_Prompt(FILE * fin)
 
     strip(lineIn);
     m->title = (char*)calloc(strlen(lineIn)+1,sizeof(char));
-    strcpy(m->title,strlen);
+    strcpy(m->title,lineIn);
 
     printf("how many actors? ");
 
@@ -169,9 +169,13 @@ void * buildTypeMovie_Prompt(FILE * fin)
 
     int actorCount;
     scanf("d", &actorCount);
+    if(actorCount < 1)
+    {
+        exit(-99);
+    }
     Actor* a = (Actor*)calloc(actorCount,sizeof(Actor));
 
-
+    while(getchar() != '\n');
     printf("list actors First Last: ");
 
     getline(&lineIn,&nbytes,stdin);

@@ -112,6 +112,7 @@ void * buildTypeWord_Prompt(FILE * fin)
     printf("enter a word to be built: ");
     scanf("%s",tmp);
     strip(tmp);
+    while(getchar() != '\n');
 
     w->len = strlen(tmp);
     w->ltrs = (char*)calloc(strlen(tmp) + 1,sizeof(char));

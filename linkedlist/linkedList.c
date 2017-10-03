@@ -136,9 +136,20 @@ void removeItem(LinkedList * theList, Node * nn, void (*removeData)(void *), int
     {
         if(compare(nn->data,cur->data) == 0)
         {
-            cur->prev->next = cur->next;
-            cur->next->prev = cur->prev;
-            removeData(nn->data);
+            if(cur->next == NULL)
+            {
+                cur->prev->next = NULL;
+                cur->prev = NULL;
+                removeData(nn->data);
+            }
+
+            else
+            {
+                cur->prev->next = cur->next;
+                cur->next->prev = cur->prev;
+                removeData(nn->data);
+            }
+
             theList -> size--;
             free(cur);
             cur=NULL;
