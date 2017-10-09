@@ -5,13 +5,15 @@ int containsPipe(char *s)
 {
     char* save;
     char copy[MAX];
-    char* res = strtok_r(copy,"|",&save);
+    char* res = NULL;
+    strcpy(copy,s);
+    res = strtok_r(copy,"|",&save);
     if(res == NULL)
     {
         return -1;
     }
 
-    int i = -1;
+    int i = 0;
     while(res != NULL)
     {
 
