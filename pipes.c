@@ -4,13 +4,14 @@
 int containsPipe(char *s)
 {
     char* save;
-    char* res = strtok_r(s,"|",&save);
+    char copy[MAX];
+    char* res = strtok_r(copy,"|",&save);
     if(res == NULL)
     {
         return -1;
     }
 
-    int i = 0;
+    int i = -1;
     while(res != NULL)
     {
 
@@ -18,6 +19,7 @@ int containsPipe(char *s)
         ++i;
 
     }
+    printf("contains pipe %d ", i);
     return i;
 
 
@@ -29,8 +31,14 @@ char ** parsePrePipe(char *s, int * preCount)
 
 
     char* save;
-    char* prePipe = strtok_r(s,"|",&save);
+    char copy[MAX];
+    strcpy(copy,s);
+    char* prePipe = strtok_r(copy,"|",&save);
     strip(prePipe);
+
+
+    printf("prePipe-> %s\n", prePipe );
+
     char** pre = NULL;
     *preCount = makeargs(prePipe, &pre);
 
@@ -44,7 +52,15 @@ char ** parsePrePipe(char *s, int * preCount)
 char ** parsePostPipe(char *s, int * postCount)
 {
     char* save;
-    char* postPipe = strtok_r(s,"|",&save);
+    char copy[MAX];
+
+    strcpy(copy,s);
+    char* postPipe = strtok_r(copy,"|",&save);
+    postPipe = strtok_r(NULL, "|", &save);
+    printf("postPipe-> %s\n", postPipe );
+
+
+
     char** post = NULL;
     *postCount = makeargs(postPipe, &post);
 
@@ -62,7 +78,8 @@ void pipeIt(char ** prePipe, char ** postPipe)
 
     int fd[2];
     pipe(fd);
-    if(pid == 0)//if child
+
+    if(pid == 0)//if child of a.out
     {
         pid_t pid2 = fork();
         if(pid2 == 0) //grandchild aka ls-l execute first
@@ -81,9 +98,9 @@ void pipeIt(char ** prePipe, char ** postPipe)
 
         else
         {
-            printf("got to inner else ");
-            waitpid(pid2, &status,0);
 
+            waitpid(pid2, &status,0);
+            printf("got to inner else ");
             close(fd[1]);
             close(0);
             dup(fd[0]);
@@ -107,7 +124,10 @@ void pipeIt(char ** prePipe, char ** postPipe)
 
         waitpid(pid,&status,0);
 
+
     }
 
 
 }
+
+//gcc -Wall cscd340Lab5.c ./tokenize/makeArgs.c ./utils/myUtils.c ./pipes/pipes.c ./process/process.c
